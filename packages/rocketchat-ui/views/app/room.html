@@ -7,38 +7,41 @@
 		</div>
 		<section class="messages-container {{adminClass}}" id="{{windowId}}" aria-label="{{_ "Channel"}}">
 			<header class="fixed-title">
-				{{> burger}}
-				<h2>
-					{{#if showToggleFavorite}}
-						<a href="#favorite" class="toggle-favorite"><i class="{{favorite}}" aria-label="{{_ favoriteLabel}}"></i></a>
-					{{/if}}
-					<i class="{{roomIcon}} status-{{userStatus}}"></i>
-					<span class="room-title">{{roomName}}</span>
-					<span class="room-topic">{{{RocketChatMarkdown roomTopic}}}</span>
-				</h2>
+				<div class="header-cover">
+					<img class="header_img_pad" src="https://c1.staticflickr.com/9/8610/16712097065_3c3ec9488b_m.jpg">
+						{{> burger}}
+					<div class="header-title">
+						<h2>
+							{{#if showToggleFavorite}}
+								<a href="#favorite" class="toggle-favorite"><i class="{{favorite}}" aria-label="{{_ favoriteLabel}}"></i></a>
+							{{/if}}
+							<i class="{{roomIcon}} status-{{userStatus}}"></i>
+							<span class="room-title">{{roomName}}</span>
+							<span class="room-topic">{{{RocketChatMarkdown roomTopic}}}</span>
+						</h2>
+					</div>
+				</div>
 			</header>
 			<div class="container-bars">
-				{{#with unreadData}}
-					{{#if since}}
-						{{#if count}}
-							<div class="unread-bar">
-								<a class="jump-to">
-									<span class="jump-to-large">{{_ "Jump_to_first_unread"}}</span>
-									<span class="jump-to-small">{{_ "Jump"}}</span>
-								</a>
-								<span class="unread-count-since">
-									{{_ "S_new_messages_since_s" count formatUnreadSince}}
-								</span>
-								<span class="unread-count">
-									{{_ "N_new_messages" count}}
-								</span>
-								<a class="mark-read">
-									{{_ "Mark_as_read"}}
-								</a>
-							</div>
-						{{/if}}
+				{{#if unreadCount}}
+					{{#if unreadSince}}
+						<div class="unread-bar">
+							<a class="jump-to">
+								<span class="jump-to-large">{{_ "Jump_to_first_unread"}}</span>
+								<span class="jump-to-small">{{_ "Jump"}}</span>
+							</a>
+							<span class="unread-count-since">
+								{{_ "S_new_messages_since_s" unreadCount formatUnreadSince}}
+							</span>
+							<span class="unread-count">
+								{{_ "N_new_messages" unreadCount}}
+							</span>
+							<a class="mark-read">
+								{{_ "Mark_as_read"}}
+							</a>
+						</div>
 					{{/if}}
-				{{/with}}
+				{{/if}}
 				{{#each uploading}}
 					<div class="upload-progress {{#if error}}upload-error{{/if}}">
 						{{#if error}}

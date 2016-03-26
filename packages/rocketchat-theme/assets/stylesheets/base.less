@@ -308,7 +308,13 @@ blockquote {
 		margin-bottom: 0;
 	}
 	&.search {
-		.icon-spin {
+		.octicon {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			font-weight: 400;
+		}
+		.icon-spin4 {
 			position: absolute;
 			right: 5px;
 			top: 10px;
@@ -464,8 +470,6 @@ input[type='email'],
 input[type='url'],
 input[type='password'] {
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	height: 35px;
 	line-height: normal;
 	border: 1px solid;
@@ -720,11 +724,12 @@ label.required:after {
 }
 
 .burger {
-	padding: 12px;
+	padding-top: 52px;
+	padding-left: 5px;
 	visibility: hidden;
 	display: none;
 	cursor: pointer;
-	margin-left: 7px;
+	margin-left: 0px;
 	position: absolute;
 	top: 5px;
 	left: 0px;
@@ -755,9 +760,10 @@ label.required:after {
 		font-weight: bold;
 		font-size: 12px;
 		top: 8px;
-		right: 4px;
+		right: -7px;
 		z-index: 3;
-		padding: 0px 4px;
+		margin-top: 41px;
+		padding: 0px 0px 0px 0px;
 	}
 }
 
@@ -1269,11 +1275,7 @@ a.github-fork {
 			box-shadow: 0 0 0;
 			border-radius: 0;
 			-webkit-appearance: none;
-			-moz-appearance: none;
-			appearance: none;
 			-webkit-border-radius: 0px;
-			-moz-border-radius: 0px;
-			border-radius: 0px;
 		}
 	}
 	.input-submit {
@@ -1625,13 +1627,13 @@ a.github-fork {
 	position: absolute;
 	.flex-center;
 	flex-flow: row nowrap;
-	padding: 0 10px 0 20px;
+	padding: 0 10px 0 0px;
 	border-bottom: 1px solid;
 	z-index: 100;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: @header-min-height+1px;
+	height: @header-min-height+80px;
 	&.visible {
 		h2 {
 			overflow: visible;
@@ -2236,7 +2238,7 @@ a.github-fork {
 	.wrapper {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 90%;
 		top: 0;
 		left: 0;
 		overflow-y: auto;
@@ -2334,11 +2336,6 @@ a.github-fork {
 				border-right: none;
 				cursor: pointer;
 				.transition(background-color 0.1s linear, color 0.1s linear);
-
-				i.file {
-					font-size: 18px;
-					vertical-align: text-bottom;
-				}
 
 				&:hover {
 				}
@@ -2503,7 +2500,7 @@ a.github-fork {
 
 .messages-box {
 	position: relative;
-	margin: 60px 20px 0px 0px;
+	margin: 120px 20px 0px 0px;
 	overflow: hidden;
 	width: 100%;
 	.calc(height,
@@ -2704,9 +2701,10 @@ a.github-fork {
 		z-index: 1000;
 		display: none;
 		background-color: #fff;
+		border: 1px solid #eee;
 		border-radius: 4px;
 		overflow: hidden;
-		box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,.16);
+		box-shadow: 1px 1px 4px #B3B3B3;
 		transition: transform .15s ease-in-out, opacity .15s ease-in-out;
 		animation: dropdown-in .15s ease-in-out;
 
@@ -4085,7 +4083,7 @@ a.github-fork {
 			.transition(transform .2s linear);
 		}
 		.fixed-title h2 {
-			margin-left: 45px;
+			margin-left: 0px;
 		}
 		.flex-tab {
 			top: 0;
@@ -4728,3 +4726,38 @@ a.github-fork {
 		}
 	}
 }
+
+.container-header{
+	width:100%;
+	height: 200px;
+	/*background-color: #00ff00;*/
+	background-image: url("headerbg.png");
+}
+
+.header-title {
+	width:100%;
+	padding-top:5px;
+	padding-left:150px;
+	padding-bottom:5px;
+	margin-top:50px;
+	background-color: #FFFFFF;
+}
+.header-cover {
+	width:100%;
+	height:100%;
+	background-image: url("headerbg.png");
+}
+
+
+.header_img_pad {
+	margin-top: 8px;
+	margin-left: 30px;
+	position: absolute;
+	z-index: 2;
+	border-style: solid;
+    border-width: 3px;
+    border-color: #FFFFFF;
+    height:120px; 
+    border-radius: 50%;
+}
+
